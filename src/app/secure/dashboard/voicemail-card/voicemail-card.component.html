@@ -1,1 +1,23 @@
-<p>voicemail-card works!</p>
+<div class="price-card-wrapper">
+  <div class="pricing-card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table-cols" scope="col">Subscriber MSISDN</th>
+          <th class="table-cols" scope="col">Sender MSISDN</th>
+          <th class="table-cols" scope="col">Voice Message</th>
+          <th class="table-cols" scope="col">Message Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of voiceMailList">
+          <th class="tr-cols" scope="row">{{item.sender_msisdn}}</th>
+          <td class="tr-cols">{{item.carton_price}}</td>
+          <td class="tr-cols">{{item.receiver_msisdn}}</td>
+          <td class="tr-cols">{{item.msg_status}}</td>
+          <td class="tr-cols">{{item.voicemail_url}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

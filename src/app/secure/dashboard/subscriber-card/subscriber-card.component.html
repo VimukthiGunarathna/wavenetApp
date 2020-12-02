@@ -1,1 +1,34 @@
-<p>subscriber-card works!</p>
+<div class="prod-card-wrapper">
+  <ng-container>
+    <!-- *ngFor="let item of products" -->
+    <div class="item-card col-lg-6" *ngFor="let item of subscribersList">
+      <div class="card-img">
+        <img src="../../../../assets/pro_pic.jpg" alt=" pro_pic">
+      </div>
+      <div class="card-desc-wrapper">
+        <div class="card-desc">
+          <div class="desc-header">
+            <div class="header">
+              <h1>
+                {{item.msisdn}}
+              </h1>
+              <div class="secondary-header">
+                <p>{{item.pin}}</p>
+              </div>
+            </div>
+            <div class="price-cart-wrapper">
+              <div class="price">
+                <p>{{item.acc_status}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <!-- <div *ngIf="isCartEmpty && isCart" class="no-item-card">
+    <p>
+      There's no items in your cart
+    </p>
+  </div> -->
+</div>

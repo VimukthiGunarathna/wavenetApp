@@ -1,5 +1,5 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -13,6 +13,7 @@ export class SubscriberService {
   });
   public url = 'http://localhost:8080';
 
+
   constructor(private http: HttpClient) { }
 
   /**
@@ -24,10 +25,9 @@ export class SubscriberService {
     return this.http.post(`${this.url}/addSubscriber`, subscriber, { headers: this.headers });
   }
 
-
   /**
-   * Get all the subscribers in the system
-   */
+ * Get all the subscribers in the system
+ */
   public getAllSubscribers(): Observable<any> {
     return this.http.get(`${this.url}/getAllSubscribers`, { headers: this.headers });
   }

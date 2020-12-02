@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VoicemailService } from '../../services/voicemail.service';
 
 @Component({
   selector: 'app-voicemail-card',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoicemailCardComponent implements OnInit {
 
-  constructor() { }
+
+  public voiceMailList;
+
+  constructor(
+    private voiceMailService: VoicemailService,
+  ) { }
 
   ngOnInit(): void {
+    // Get all the availabe products pricing    
+    this.voiceMailService.getAllMails().subscribe(data => {
+      this.voiceMailList = data;
+    });
   }
 
 }

@@ -14,6 +14,8 @@ import { TopNavComponent } from './secure/shared/top-nav/top-nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faMinus, faPlus, faShoppingBag, faSortAmountDownAlt } from '@fortawesome/free-solid-svg-icons';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,9 @@ import { faMinus, faPlus, faShoppingBag, faSortAmountDownAlt } from '@fortawesom
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     FontAwesomeModule
   ],
