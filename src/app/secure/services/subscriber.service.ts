@@ -23,4 +23,13 @@ export class SubscriberService {
     console.log('IAM ', subscriber);
     return this.http.post(`${this.url}/addSubscriber`, subscriber, { headers: this.headers });
   }
+
+
+  /**
+   * Get all the subscribers in the system
+   */
+  public getAllSubscribers(): Observable<any> {
+    return this.http.get(`${this.url}/getAllSubscribers`, { headers: this.headers });
+  }
 }
+
